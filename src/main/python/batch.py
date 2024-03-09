@@ -42,4 +42,4 @@ if __name__ == '__main__':
     print('User DevOps has been added with id ', person.set_name('DevOps'))
     print('User associated with id 0 is ', person.get_name(0))
 
-"""Ensure there is a final newline """
+
