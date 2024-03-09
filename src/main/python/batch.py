@@ -1,3 +1,7 @@
+"""
+This module provides a class for managing person objects.
+"""
+
 class Person:
     """
     A class representing a person with a name.
