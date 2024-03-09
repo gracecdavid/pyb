@@ -1,14 +1,23 @@
 import unittest
+
 class Testing(unittest.TestCase):
-    def test_string(self):
+    def test_string_equal(self):
         a = 'some'
         b = 'some'
         self.assertEqual(a, b)
 
-    def test_boolean(self):
+    def test_string_not_equal(self):
+        a = 'some'
+        b = 'different'
+        self.assertNotEqual(a, b)
+
+    def test_boolean_true(self):
         a = True
-        b = True
-        self.assertEqual(a, b)
+        self.assertTrue(a)
+
+    def test_boolean_false(self):
+        a = False
+        self.assertFalse(a)
 
 if __name__ == '__main__':
     unittest.main()
