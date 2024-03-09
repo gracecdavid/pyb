@@ -1,5 +1,5 @@
 import unittest
-from main.python.batch import Person
+from batch import Person
 
 class TestPerson(unittest.TestCase):
     def test_set_name(self):
