@@ -61,5 +61,23 @@ class TestPerson(unittest.TestCase):
                 # If length exceeds, then check for 'There is no such user' message
                 self.assertEqual('There is no such user', self.person.get_name(i))
 
+    def test_get_name1(self):
+        """
+        Test case to verify the Person.get_name method.
+        """
+        length = len(self.user_id)  # Total number of stored user information
+        print("user_id length =", length)
+        print("user_name length =", len(self.user_name))
+        
+        for i in range(7):
+            # If i does not exceed total length, then verify the returned name
+            if i < length:
+                # If the two names do not match, the test case will fail
+                self.assertEqual(self.user_name[i], self.person.get_name(self.user_id[i]))
+            else:
+                print("Testing for get_name no user test")
+                # If length exceeds, then check for 'There is no such user' message
+                self.assertEqual('There is no such user', self.person.get_name(i))
+    
 if __name__ == '__main__':
     unittest.main()
